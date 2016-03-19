@@ -1,0 +1,21 @@
+﻿@foreach (var item in Model)
+{
+    <div class="teamContainer">
+        <div class="teamNameHeader">
+            Team Name: <b>@item.Team.TeamName</b>
+            <span class="teamCount">Games Played: <b>@item.Team.Count</b></span>
+        </div>
+        <div class="gameInfoToggle">
+            @foreach (var gameInfo in item.Team.LstGameInfo)
+                {
+                <span class="gameInfoRow1">
+                    Game 1 Date: @gameInfo.GameOneDate - Game 1 Home: @Html.Raw(gameInfo.GameOneHome) | Game 2 Home: @Html.Raw(gameInfo.GameTwoHome) - @gameInfo.FinalGameOne<br />
+                </span>
+                    <span class="gameInfoRow2">
+                        Game 2 Date: @gameInfo.GameTwoDate - Opp. Played Day Before: @Html.Raw(gameInfo.OpponentPlayedDayBefore) | Final: @gameInfo.FinalGameTwo
+                    </span>
+                    <br />
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,306 @@
+﻿body {
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.page {
+    width: 760px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+    .header h2 {
+        text-align: center;
+        margin: 0px;
+        color: #f9f9f9;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+.teamContainer {
+    margin: 0px 0px 10px 40px;
+}
+
+.teamNameHeader {
+    font-size: 1.2em;
+    margin-bottom: 2px;
+}
+
+.teamCount {
+    padding-left: 7px;
+}
+
+.gameInfoRow1 {
+    padding-left: 19px;
+}
+
+.gameInfoRow2 {
+    padding-left: 19px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.gameInfoToggle {
+    color: #696969;
+    display: none;
+}
+
+.details {
+    color: dodgerblue;
+    font-size: 11px;
+}
+
+    .details:hover {
+        /*color: coral;
+    cursor: pointer;*/
+    }
+
+.oppPlayedNightBefYes {
+    color: blue;
+}
+
+.oppPlayedNightBefNo {
+    color: red;
+}
+
+.renderaction:hover {
+    color: coral;
+    cursor: pointer;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    -o-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.sk-fading-circle {
+    /*margin: 16px auto;*/
+    margin-left: 60px;
+    width: 9px;
+    height: 20px;
+    position: relative;
+}
+
+    .sk-fading-circle .sk-circle {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+        .sk-fading-circle .sk-circle:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+            height: 15%;
+            background-color: red;
+            border-radius: 100%;
+            -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+            animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+        }
+
+    .sk-fading-circle .sk-circle2 {
+        -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+
+    .sk-fading-circle .sk-circle3 {
+        -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+    }
+
+    .sk-fading-circle .sk-circle4 {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .sk-fading-circle .sk-circle5 {
+        -webkit-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+        transform: rotate(120deg);
+    }
+
+    .sk-fading-circle .sk-circle6 {
+        -webkit-transform: rotate(150deg);
+        -ms-transform: rotate(150deg);
+        transform: rotate(150deg);
+    }
+
+    .sk-fading-circle .sk-circle7 {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .sk-fading-circle .sk-circle8 {
+        -webkit-transform: rotate(210deg);
+        -ms-transform: rotate(210deg);
+        transform: rotate(210deg);
+    }
+
+    .sk-fading-circle .sk-circle9 {
+        -webkit-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+        transform: rotate(240deg);
+    }
+
+    .sk-fading-circle .sk-circle10 {
+        -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+
+    .sk-fading-circle .sk-circle11 {
+        -webkit-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
+        transform: rotate(300deg);
+    }
+
+    .sk-fading-circle .sk-circle12 {
+        -webkit-transform: rotate(330deg);
+        -ms-transform: rotate(330deg);
+        transform: rotate(330deg);
+    }
+
+    .sk-fading-circle .sk-circle2:before {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+
+    .sk-fading-circle .sk-circle3:before {
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+    }
+
+    .sk-fading-circle .sk-circle4:before {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+
+    .sk-fading-circle .sk-circle5:before {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+
+    .sk-fading-circle .sk-circle6:before {
+        -webkit-animation-delay: -0.7s;
+        animation-delay: -0.7s;
+    }
+
+    .sk-fading-circle .sk-circle7:before {
+        -webkit-animation-delay: -0.6s;
+        animation-delay: -0.6s;
+    }
+
+    .sk-fading-circle .sk-circle8:before {
+        -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+    }
+
+    .sk-fading-circle .sk-circle9:before {
+        -webkit-animation-delay: -0.4s;
+        animation-delay: -0.4s;
+    }
+
+    .sk-fading-circle .sk-circle10:before {
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+
+    .sk-fading-circle .sk-circle11:before {
+        -webkit-animation-delay: -0.2s;
+        animation-delay: -0.2s;
+    }
+
+    .sk-fading-circle .sk-circle12:before {
+        -webkit-animation-delay: -0.1s;
+        animation-delay: -0.1s;
+    }
+
+@-webkit-keyframes sk-circleFadeDelay {
+    0%, 39%, 100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes sk-circleFadeDelay {
+    0%, 39%, 100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+}
