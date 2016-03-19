@@ -16,6 +16,7 @@ namespace NHLScheduleEval.Domain.Concrete
 
         public IEnumerable<TeamB2BComparison> GetB2BComparisonByTeamID(string teamName)
         {
+            #region randomNess
             List<string> thing = new List<string>()
             {
                 "Anaheim",
@@ -40,6 +41,8 @@ namespace NHLScheduleEval.Domain.Concrete
                 int rInt = r.Next(2000, 4000);
                 Thread.Sleep(rInt);
             }
+            #endregion
+
             // Manual here since this info is static
             // 'ScheduleByDate' properties came directly from NHL.com in the summer of 2013
             List<ScheduleByDate> lstScheduleByDate = new List<ScheduleByDate>()
@@ -914,17 +917,6 @@ namespace NHLScheduleEval.Domain.Concrete
             }
 
             return lstTeamB2BComparison;
-        }
-
-        /// <summary>
-        /// Repository of back to back game comparisons by team
-        /// </summary>
-        public IEnumerable<TeamB2BComparison> TeamB2BComparisons
-        {
-            get
-            {
-                return lstTeamB2BComparison;
-            }
         }
     }
 

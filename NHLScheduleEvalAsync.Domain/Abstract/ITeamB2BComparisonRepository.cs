@@ -12,7 +12,6 @@ namespace NHLScheduleEval.Domain.Abstract
     /// </summary>
     public interface ITeamB2BComparisonRepository
     {
-        IEnumerable<TeamB2BComparison> TeamB2BComparisons { get; }
         IEnumerable<TeamB2BComparison> GetB2BComparisonByTeamID(string teamName);
     }
 }

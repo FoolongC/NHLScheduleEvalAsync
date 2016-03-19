@@ -11,12 +11,6 @@ namespace NHLScheduleEval.WebUI.Controllers
 {
     public class NHLScheduleEvalController : Controller
     {
-        private ITeamB2BComparisonRepository repository;
-
-        public NHLScheduleEvalController()
-        {          
-        }
-
         public ActionResult Index()
         {
             return View();
@@ -24,7 +18,7 @@ namespace NHLScheduleEval.WebUI.Controllers
 
         public PartialViewResult TeamGrid(string teamName)
         {
-            repository = new GameB2BComparisonRepository();
+            ITeamB2BComparisonRepository repository = new GameB2BComparisonRepository();
             return PartialView("_TeamPartialView", repository.GetB2BComparisonByTeamID(teamName));  
         }
     }

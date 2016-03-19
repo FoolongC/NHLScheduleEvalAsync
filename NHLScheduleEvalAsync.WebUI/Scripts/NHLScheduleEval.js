@@ -2,8 +2,8 @@
 
 	$(".renderaction").each(function (i, n) {
 		var $n = $(n),
-			url = $n.attr('data-actionurl'),
-			$this = $(this);
+		url = $n.attr('data-actionurl'),
+		$this = $(this);
 		$this.append("<div class='teamContainer teamNameHeader'>Team Name: <b>" + $this.attr('id') + "</b></div>");
 		$this.append(
 			"<div class='sk-fading-circle spinner'>" +
@@ -20,7 +20,7 @@
 			"<div class='sk-circle11 sk-circle'></div>" +
 			"<div class='sk-circle12 sk-circle'></div>" +
 			"</div>"
-			);
+		);
 		$.get(url, function (data) {
 			$this.html(data);
 		});
