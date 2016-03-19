@@ -78,11 +78,11 @@ textarea {
     }
 
 .oppPlayedNightBefYes {
-    color: blue;
+    color: #4b6c9e;
 }
 
 .oppPlayedNightBefNo {
-    color: red;
+    color: #ff3333;
 }
 
 .renderaction:hover {
