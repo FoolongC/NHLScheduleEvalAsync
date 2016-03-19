@@ -90,6 +90,11 @@ textarea {
     cursor: pointer;
 }
 
+.downLoadLink {
+    margin: 0px 30px 10px 0px;
+    text-align: right;
+}
+
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn {
     from {
