@@ -26,7 +26,59 @@
 		});
 	});
 
+	var listByCount = 0;
+
+	$(".teamsByCount").click(function () {
+		$(".renderaction").toggle();
+		$(this).toggle();
+		$(".teamsByAlpha").toggle();
+		$("#teamGridCount").show();
+		if (listByCount == 0) {
+			$.getJSON("api/teamcount")
+				.done(function (data) {
+					$.each(data, function (key, item) {
+						$("#teamGridCount").append("<div id='" + item.Team.TeamName.replace(/\./g, ' ').replace(/ /g, '')
+							+ "' class='teamNameHeader fade-in renderaction'>"
+							+ "Team Name: <b>"
+							+ item.Team.TeamName + " </b>Games Played: <b>"
+							+ item.Team.Count + "</b></div>");
+
+						item.Team.LstGameInfo.forEach(function (entry) {
+							$("#teamGridCount").append("<div class='gameInfoToggle fade-in "
+								+ item.Team.TeamName.replace(/\./g, ' ').replace(/ /g, '') + "'>"
+								+ "<span class='gameInfoRow1'>Game One Date: "
+								+ entry.GameOneDate
+								+ " - Game 1 Home: " + entry.GameOneHome
+								+ " | Game 2 Home: " + entry.GameTwoHome
+								+ " - " + entry.FinalGameOne
+								+ "</span><br/>"
+								+ "<span class='gameInfoRow2'>Game Two Date: "
+								+ entry.GameTwoDate
+								+ " - Opp. Played Day Before: "
+								+ entry.OpponentPlayedDayBefore
+								+ " - " + entry.FinalGameTwo
+								+ "</span></div>");
+						})
+
+					});
+				});
+		}
+		listByCount = 1;
+	});
+
+	$(".teamsByAlpha").click(function () {
+		$(this).toggle();
+		$(".renderaction").toggle();
+		$("#teamGridCount").hide();
+		$(".teamsByCount").toggle();
+	});
+
+	$(document).on('click', '.teamNameHeader', function (e) {
+		var thisId = $(this).attr('id');
+		$('.' + thisId).toggle();
+	});
+
 	$(".renderaction").click(function () {
 		$(this).closest('div').find('.gameInfoToggle').toggle();
-		});
+	});
 });

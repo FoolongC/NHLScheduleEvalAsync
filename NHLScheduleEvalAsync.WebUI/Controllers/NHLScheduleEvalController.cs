@@ -11,15 +11,21 @@ namespace NHLScheduleEval.WebUI.Controllers
 {
     public class NHLScheduleEvalController : Controller
     {
+        private ITeamB2BComparisonRepository repository;
+
+        public NHLScheduleEvalController(ITeamB2BComparisonRepository teamRepository)
+        {
+            this.repository = teamRepository;
+        }
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public PartialViewResult TeamGrid(string teamName)
+        public PartialViewResult TeamGridAlpha(string teamName)
         {
-            ITeamB2BComparisonRepository repository = new GameB2BComparisonRepository();
-            return PartialView("_TeamPartialView", repository.GetB2BComparisonByTeamID(teamName));  
+            return PartialView("_TeamAlphaPartialView", repository.GetB2BComparisonByTeamID(teamName));  
         }
     }
 }

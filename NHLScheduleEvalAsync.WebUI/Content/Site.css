@@ -19,7 +19,7 @@ textarea {
     width: 760px;
     background-color: #fff;
     margin: 20px auto 0px auto;
-    border: 1px solid #496077;
+    /*border: 1px solid #496077;*/
 }
 
 .header {
@@ -90,9 +90,28 @@ textarea {
     cursor: pointer;
 }
 
+.teamsByCount {
+    color: #428bca;
+    text-decoration: none;
+    cursor:pointer;
+    padding-left:10px;
+}
+
+.teamsByAlpha {
+    color: #428bca;
+    text-decoration: none;
+    cursor:pointer;
+    display:none;
+    padding-left:10px;
+}
+
 .downLoadLink {
-    margin: 0px 30px 10px 0px;
-    text-align: right;
+    margin: 0px 0px 10px 0px;
+}
+
+.downLoadLink div{
+    display:inline-block;
+    float:right;
 }
 
 /* make keyframes that tell the start state and the end state of our object */

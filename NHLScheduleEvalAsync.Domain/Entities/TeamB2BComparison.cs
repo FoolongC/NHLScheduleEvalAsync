@@ -13,6 +13,7 @@ namespace NHLScheduleEval.Domain.Entities
     public class TeamB2BComparison
     {
         public Team Team { get; set; }
+        public int Count { get; set; }
     }
 
     #region containers

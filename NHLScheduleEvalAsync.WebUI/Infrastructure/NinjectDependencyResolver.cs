@@ -21,7 +21,7 @@ namespace NHLScheduleEval.WebUI.Infrastructure
 
         private void AddBindings()
         {
-            //kernel.Bind<ITeamB2BComparisonRepository>().To<GameB2BComparisonRepository>();
+            kernel.Bind<ITeamB2BComparisonRepository>().To<GameB2BComparisonRepository>();
         }
 
         public object GetService(Type serviceType)
