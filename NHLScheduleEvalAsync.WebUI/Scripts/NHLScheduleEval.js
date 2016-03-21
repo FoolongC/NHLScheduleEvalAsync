@@ -6,7 +6,7 @@
 		$this = $(this);
 		$this.append("<div class='teamContainer teamNameHeader'>Team Name: <b>" + $this.attr('id') + "</b></div>");
 		$this.append(
-			"<div class='sk-fading-circle spinner'>" +
+			"<div id='fadingCircle' class='sk-fading-circle spinner'>" +
 			"<div class='sk-circle1 sk-circle'></div>" +
 			"<div class='sk-circle2 sk-circle'></div>" +
 			"<div class='sk-circle3 sk-circle'></div>" +
@@ -33,7 +33,24 @@
 		$(this).toggle();
 		$(".teamsByAlpha").toggle();
 		$("#teamGridCount").show();
+
 		if (listByCount == 0) {
+		    $("#teamGridCount").prepend(
+			"<div style='margin-left:2px;' class='sk-fading-circle spinner'>" +
+			"<div class='sk-circle1 sk-circle'></div>" +
+			"<div class='sk-circle2 sk-circle'></div>" +
+			"<div class='sk-circle3 sk-circle'></div>" +
+			"<div class='sk-circle4 sk-circle'></div>" +
+			"<div class='sk-circle5 sk-circle'></div>" +
+			"<div class='sk-circle6 sk-circle'></div>" +
+			"<div class='sk-circle7 sk-circle'></div>" +
+			"<div class='sk-circle8 sk-circle'></div>" +
+			"<div class='sk-circle9 sk-circle'></div>" +
+			"<div class='sk-circle10 sk-circle'></div>" +
+			"<div class='sk-circle11 sk-circle'></div>" +
+			"<div class='sk-circle12 sk-circle'></div>" +
+			"</div>"
+		);
 			$.getJSON("api/teamcount")
 				.done(function (data) {
 					$.each(data, function (key, item) {
@@ -58,9 +75,9 @@
 								+ entry.OpponentPlayedDayBefore
 								+ " - " + entry.FinalGameTwo
 								+ "</span></div>");
-						})
-
+						})                        
 					});
+					$(".sk-fading-circle").remove();
 				});
 		}
 		listByCount = 1;
