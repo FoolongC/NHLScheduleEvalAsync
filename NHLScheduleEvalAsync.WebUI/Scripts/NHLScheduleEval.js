@@ -29,13 +29,14 @@
 	var listByCount = 0;
 
 	$(".teamsByCount").click(function () {
-		$(".renderaction").toggle();
+		$(".partialViewContainer").toggle();
 		$(this).toggle();
 		$(".teamsByAlpha").toggle();
+		$(".APIContainer").show();
 		$("#teamGridCount").show();
 
 		if (listByCount == 0) {
-		    $("#teamGridCount").prepend(
+			$("#teamGridCount").prepend(
 			"<div style='margin-left:2px;' class='sk-fading-circle spinner'>" +
 			"<div class='sk-circle1 sk-circle'></div>" +
 			"<div class='sk-circle2 sk-circle'></div>" +
@@ -53,6 +54,7 @@
 		);
 			$.getJSON("api/teamcount")
 				.done(function (data) {
+				    $(".APIContainer").prepend("<div class='containerHeader'>Ajax call to Web API 2 Controller</div>");
 					$.each(data, function (key, item) {
 						$("#teamGridCount").append("<div id='" + item.Team.TeamName.replace(/\./g, ' ').replace(/ /g, '')
 							+ "' class='teamNameHeader fade-in renderaction'>"
@@ -85,7 +87,8 @@
 
 	$(".teamsByAlpha").click(function () {
 		$(this).toggle();
-		$(".renderaction").toggle();
+		$(".partialViewContainer").toggle();
+		$(".APIContainer").toggle();
 		$("#teamGridCount").hide();
 		$(".teamsByCount").toggle();
 	});

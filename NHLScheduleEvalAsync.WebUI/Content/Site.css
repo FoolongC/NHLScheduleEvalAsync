@@ -19,7 +19,6 @@ textarea {
     width: 710px;
     background-color: #fff;
     margin: 20px auto 0px auto;
-    /*border: 1px solid #496077;*/
 }
 
 .header {
@@ -30,17 +29,28 @@ textarea {
     width: 100%;
 }
 
-    .header h2 {
-        text-align: center;
-        margin: 0px;
-        color: #f9f9f9;
-        border: none;
-        line-height: 2em;
-        font-size: 2em;
-    }
+.header h2 {
+    text-align: center;
+    margin: 0px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.containerHeader{
+    color: #4b6c9e;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0px 0px 7px 24px;
+}
 
 .teamContainer {
-    margin: 0px 0px 10px 40px;
+    margin: 0px 0px 10px 43px;
+}
+
+#teamGridCount {
+    margin: 0px 0px 10px 43px;
 }
 
 .teamNameHeader {
@@ -53,12 +63,12 @@ textarea {
 }
 
 .gameInfoRow1 {
-    color:#696969;
+    color: #696969;
     padding-left: 19px;
 }
 
 .gameInfoRow2 {
-    color:#696969;
+    color: #696969;
     padding-left: 19px;
     display: inline-block;
     margin-bottom: 5px;
@@ -73,11 +83,6 @@ textarea {
     color: dodgerblue;
     font-size: 11px;
 }
-
-    .details:hover {
-        /*color: coral;
-    cursor: pointer;*/
-    }
 
 .oppPlayedNightBefYes {
     color: #4b6c9e;
@@ -95,25 +100,25 @@ textarea {
 .teamsByCount {
     color: #428bca;
     text-decoration: none;
-    cursor:pointer;
-    padding-left:10px;
+    cursor: pointer;
+    padding-left: 10px;
 }
 
 .teamsByAlpha {
     color: #428bca;
     text-decoration: none;
-    cursor:pointer;
-    display:none;
-    padding-left:10px;
+    cursor: pointer;
+    display: none;
+    padding-left: 10px;
 }
 
 .downLoadLink {
     margin: 0px 0px 10px 0px;
 }
 
-.downLoadLink div{
-    display:inline-block;
-    float:right;
+.downLoadLink div {
+    display: inline-block;
+    float: right;
 }
 
 /* make keyframes that tell the start state and the end state of our object */
