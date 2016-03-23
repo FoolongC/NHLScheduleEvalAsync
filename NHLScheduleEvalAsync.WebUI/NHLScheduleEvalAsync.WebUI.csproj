@@ -142,6 +142,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\NHLScheduleEval.js" />
+    <Content Include="Scripts\Spinner.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
