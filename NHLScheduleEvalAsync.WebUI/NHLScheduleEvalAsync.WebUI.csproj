@@ -172,7 +172,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Api\Controllers\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

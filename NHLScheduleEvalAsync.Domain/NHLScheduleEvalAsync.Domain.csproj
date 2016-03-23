@@ -98,7 +98,13 @@
   <ItemGroup>
     <Compile Include="Abstract\ITeamB2BComparisonRepository.cs" />
     <Compile Include="Concrete\GameB2BComparisonRepository.cs" />
+    <Compile Include="Entities\GameInfo.cs" />
+    <Compile Include="Entities\PlayedB2B.cs" />
+    <Compile Include="Entities\SampleData.cs" />
+    <Compile Include="Entities\ScheduleByDate.cs" />
+    <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\TeamB2BComparison.cs" />
+    <Compile Include="Entities\TeamsByPlayDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

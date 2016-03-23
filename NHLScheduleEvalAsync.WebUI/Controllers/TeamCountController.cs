@@ -25,5 +25,12 @@ namespace NHLScheduleEvalAsync.Api.Controllers
         {
             return repository.GetB2BComparisonByTeamID(null).OrderByDescending(x => x.Count);
         }
+
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpGet]
+        public IEnumerable<TeamB2BComparison> TeamGridCount(string id)
+        {
+            return repository.GetB2BComparisonByTeamID(id).OrderByDescending(x => x.Count);
+        }
     }
 }

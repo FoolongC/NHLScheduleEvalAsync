@@ -1,5 +1,4 @@
-﻿using NHLScheduleEval.Domain.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +7,11 @@ using System.Threading.Tasks;
 namespace NHLScheduleEval.Domain.Entities
 {
     /// <summary>
-    /// Team model
+    /// Container for repository
     /// </summary>
-    public class TeamB2BComparison
+    public struct TeamsByPlayDate
     {
-        public Team Team { get; set; }
-        public int Count { get; set; }
+        public List<string> LstTeamNames;
+        public DateTime PlayDate { get; set; }
     }
 }

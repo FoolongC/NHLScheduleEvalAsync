@@ -16,7 +16,7 @@ textarea {
 }
 
 .page {
-    width: 630px;
+    width: 710px;
     background-color: #fff;
     margin: 20px auto 0px auto;
     /*border: 1px solid #496077;*/
@@ -53,10 +53,12 @@ textarea {
 }
 
 .gameInfoRow1 {
+    color:#696969;
     padding-left: 19px;
 }
 
 .gameInfoRow2 {
+    color:#696969;
     padding-left: 19px;
     display: inline-block;
     margin-bottom: 5px;
