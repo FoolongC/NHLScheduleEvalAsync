@@ -27,18 +27,21 @@ textarea {
     padding: 0px;
     background: #4b6c9e;
     width: 100%;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
-.header h2 {
-    text-align: center;
-    margin: 0px;
-    color: #f9f9f9;
-    border: none;
-    line-height: 2em;
-    font-size: 2em;
-}
+    .header h2 {
+        text-align: center;
+        margin: 0px;
+        color: #f9f9f9;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
 
-.containerHeader{
+.containerHeader {
     color: #4b6c9e;
     font-size: 1.4em;
     font-weight: bold;
@@ -116,10 +119,10 @@ textarea {
     margin: 0px 0px 10px 0px;
 }
 
-.downLoadLink div {
-    display: inline-block;
-    float: right;
-}
+    .downLoadLink div {
+        display: inline-block;
+        float: right;
+    }
 
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn {

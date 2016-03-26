@@ -72,6 +72,6 @@
 	});
 
 	$(".renderaction").click(function () {
-		$(this).closest('div').find('.gameInfoToggle').toggle();
+		$(this).closest('div').find('.gameInfoToggle').toggle('2200');
 	});
 });
